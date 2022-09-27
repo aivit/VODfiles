@@ -1,9 +1,11 @@
 Collection of scripts to Download an (VOD) .m3u and Convert all links into .strm files sorted in folders
+
 Intructions and optimized for Windows users
 
 Extract all scripts into a directory of your choosing, the name of the directory does not matter but this directory will be where your .strm movies and tvshow directories will get generated automatically
 
 Your Windows must support Shellscripts using BASH, Python and have WGET installed in your Windows System32 directory.
+
 You must also create a separate .m3u that contains ONLY VOD streams for Movies and TV-Shows although it should work if Livestreams and VOD are combined in one .m3u, it is just more efficient and quicker to make a new .m3u
 
 1- Get the latest WGET.exe here: https://eternallybored.org/misc/wget/ and extract/copy WGET.EXE to C:\Windows\System32\
