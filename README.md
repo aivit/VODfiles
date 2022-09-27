@@ -24,7 +24,7 @@ Run the script whenever you want to update your files, it's not needed to run mo
 You can run it manually, set up a scheduled task or add it to your Windows Startup directory to run on boot
 
 Update 0.92 changelog
-- directories will now grab the directories where scripts are installed as root
+- directories will now grab the directories where scripts are installed as root.
 As a result you can install and run the scripts from any location you prefer
 - VOD .m3u will now be stored as VODstemp.m3u and automatically removed after each update
 - logs and cache folders now deleted by default on successful completion of tasks
