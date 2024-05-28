@@ -1,30 +1,25 @@
-Collection of scripts to Download an (VOD) .m3u and Convert all links into .strm files sorted in folders
+## Collection of Scripts for VOD .m3u Conversion (Unix Version)
 
-Intructions and optimized for Windows users
+This collection of scripts allows you to download a VOD (Video on Demand) .m3u file and convert all links into .strm files sorted in folders.
 
-Extract all scripts into a directory of your choosing, the name of the directory does not matter but this directory will be where your .strm movies and tvshow directories will get generated automatically
+### Instructions (Optimized for Unix Systems)
 
-Your Windows must support Shellscripts using BASH, Python and have WGET installed in your Windows System32 directory.
+Extract all scripts into a directory of your choosing. The name of the directory does not matter, as the scripts are designed to work from any location.
 
-You must also create a separate .m3u that contains ONLY VOD streams for Movies and TV-Shows although it should work if Livestreams and VOD are combined in one .m3u, it is just more efficient and quicker to make a new .m3u
+Your Unix system must support Shell scripts using BASH and Python.
 
-1- Get the latest WGET.exe here: https://eternallybored.org/misc/wget/ and extract/copy WGET.EXE to C:\Windows\System32\
+**IMPORTANT:** You only need to edit `start.sh` with any text editor to include your personal VOD .m3u URL. Follow these steps:
 
-2- Make sure your Windows has Git BASH or get it here: https://git-scm.com/download/win (select "(NEW)Add Git Bash Profile to Windows Terminal" while installing
+1. **Rename `vod_url.example.txt` to `vod_url.txt`:** 
+   - Copy `vod_url.example.txt` and rename the copy to `vod_url.txt`.
 
-3- Make sure your Windows has Python or get it here: https://www.python.org/downloads/
+2. **Add Your VOD URL:**
+   - Open the `vod_url.txt` file.
+   - Paste your VOD URL into the file.
+   - Save and close the file.
 
-IMPORTANT: When these scripts are installed in place you ONLY have to edit start.sh with any text editor to include your personal VOD.m3u URL
+To start the script, run `start.sh`. Your .strm files will be created in the `movies` and `tvshows` subdirectories within your install directory and can be used like any other video file.
 
-To start the script run start.sh, your .strm files will be created in the movies and tvshows subdirectories within your install directory and can be used as any other videofile
+I recommend using Emby, Jellyfin, or Kodi. Create a library for both VOD movies and VOD TV shows and point to the `movies` and `tvshows` folders for file location so images and information can be scraped.
 
-I recommend Emby, Jellyfin or Kodi, create a library for both VOD Movies and VOD TvShows and point to the movies and tvshows folders for file location so images and information can be scraped
-
-Run the script whenever you want to update your files, it's not needed to run more than once a day but recommended to run not less than once a week
-You can run it manually, set up a scheduled task or add it to your Windows Startup directory to run on boot
-
-Update 0.92 changelog
-- directories will now grab the directories where scripts are installed as root.
-As a result you can install and run the scripts from any location you prefer
-- VOD .m3u will now be stored as VODstemp.m3u and automatically removed after each update
-- logs and cache folders now deleted by default on successful completion of tasks
+Run the script whenever you want to update your files. It's not needed to run more than once a day but recommended to run not less than once a week. You can run it manually or set up a scheduled task.
