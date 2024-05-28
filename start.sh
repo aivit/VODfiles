@@ -1,9 +1,8 @@
 #!/bin/bash
 
-link=$'https://tv123.me/iptv/*****/*****/channels' # <-------IMPORTANT!! Edit to YOUR personal VOD .m3u URL
+link=$(cat vod_url.txt)
 
-#DO NOT edit anything below this line unless you know what you're doing!
-#--------------------------------------------------------------------------
+echo "Using VOD URL: $link"
 
 root=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 SECONDS=0
@@ -49,7 +48,7 @@ rm -r __pycache__
 #on success delete Python logs
 rm -r logs
 #On succes delete temp .m3u
-rm VODStemp.m3u
+rm VODstemp.m3u
 trap : 0
 echo >&2 "
 ****************************************************
